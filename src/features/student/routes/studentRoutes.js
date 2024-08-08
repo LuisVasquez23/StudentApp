@@ -91,6 +91,8 @@ router.use(authMiddleware);
  *         application/json:
  *           schema:
  *             $ref: '#/components/schemas/CreateStudentRequest'
+ *     security:
+ *       - bearerAuth: []
  *     responses:
  *       201:
  *         description: Student created successfully
@@ -131,6 +133,8 @@ router.get('/', (req, res) => StudentController.getStudentsHandler(req, res));
  *   get:
  *     summary: Get a student by ID
  *     tags: [Students]
+ *     security:
+ *       - bearerAuth: []
  *     parameters:
  *       - name: id
  *         in: path
@@ -157,6 +161,8 @@ router.get('/:id', (req, res) => StudentController.getStudentByIdHandler(req, re
  *   put:
  *     summary: Update a student by ID
  *     tags: [Students]
+ *     security:
+ *       - bearerAuth: []
  *     parameters:
  *       - name: id
  *         in: path
@@ -191,6 +197,8 @@ router.put('/:id', updateStudentValidator, validationMiddleware, (req, res) => S
  *   delete:
  *     summary: Delete a student by ID
  *     tags: [Students]
+ *     security:
+ *       - bearerAuth: []
  *     parameters:
  *       - name: id
  *         in: path
