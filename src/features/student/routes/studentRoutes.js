@@ -113,6 +113,8 @@ router.post('/', createStudentValidator, validationMiddleware, (req, res) => Stu
  *   get:
  *     summary: Get all students
  *     tags: [Students]
+ *     security:
+ *       - bearerAuth: []
  *     responses:
  *       200:
  *         description: List of all students
