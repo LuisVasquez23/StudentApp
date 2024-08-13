@@ -17,7 +17,7 @@ This project is a Node.js application using a vertical slice architecture patter
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/YourUsername/StudentApp.git
+    git clone https://github.com/LuisVasquez23/StudentApp.git
     cd StudentApp
     ```
 
